@@ -97,7 +97,9 @@ img {
     background-color: var(--card-bg);
     border-radius: var(--border-radius);
     box-shadow: 8px 8px 16px var(--shadow-dark), 
-                -8px -8px 16px var(--shadow-light);
+                -8px -8px 16px var(--shadow-light),
+                8px -8px 16px var(--shadow-dark),
+                -8px 8px 16px var(--shadow-light);
     transition: var(--transition);
 }
 
@@ -166,7 +168,7 @@ img {
     box-shadow: 10px 10px 20px var(--shadow-dark), 
                 -10px -10px 20px var(--shadow-light);
     transform: translateY(-3px);
-    background-color: var(--accent-color);
+    background-color: var(--primary-color);
 }
 
 .btn:active {
@@ -522,14 +524,21 @@ nav.neumorphic {
 
 .timeline-year {
     position: absolute;
-    right: -25px;
+    right: 20px;
     top: 20px;
-    background: var(--primary-color);
-    color: white;
-    padding: 0.5rem 1rem;
-    border-radius: 25px;
+    background: var(--card-bg);
+    color: var(--primary-color);
+    padding: 8px 15px;
+    border-radius: 15px;
+    font-size: 0.9rem;
+    box-shadow: 3px 3px 6px var(--shadow-dark);
+    border-radius: 15px;
+    font-size: 0.85rem;
     box-shadow: 3px 3px 6px var(--shadow-dark),
-               -3px -3px 6px var(--shadow-light);
+               -3px -3px 6px var(--shadow-light),
+               inset 2px 2px 4px var(--shadow-dark),
+               inset -2px -2px 4px var(--shadow-light);
+    z-index: 2;
 }
 
 .timeline-item:nth-child(even) {
@@ -830,11 +839,17 @@ nav.neumorphic {
 }
 
 .education-date {
-    position: absolute;
-    top: 23px;
+    position: static;
+    margin: 0 0 15px 0;
     font-weight: 600;
     color: var(--primary-color);
     font-size: 0.9rem;
+    text-align: right;
+    padding: 8px 15px;
+    background: var(--card-bg);
+    border-radius: 15px;
+    display: inline-block;
+    box-shadow: 3px 3px 6px var(--shadow-dark);
 }
 
 .education-item:nth-child(odd) .education-date {
